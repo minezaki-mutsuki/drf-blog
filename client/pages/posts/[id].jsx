@@ -1,7 +1,7 @@
 import { getAllPostsId, getPostData } from "@/lib/posts";
 import { useRouter } from "next/router";
 
-export const PostData = ({ post }) => {
+export default function PostData({ post }) {
   const router = useRouter();
   if (router.isFallback || !post) {
     return <p>Loading...</p>;
@@ -16,7 +16,7 @@ export const PostData = ({ post }) => {
       <p>{post.content}</p>
     </>
   );
-};
+}
 
 export const getStaticPaths = async () => {
   const paths = await getAllPostsId();

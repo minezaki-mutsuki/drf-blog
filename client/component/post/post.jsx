@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Post = ({ post }) => {
   return (
-    <Link href={`/posts/${post.id}/`}>
+    <Link href={`/posts/${post.id}`}>
       <Wrapper>
         <img width="150px" src={post.image} alt="post" />
         <h5>{post.title}</h5>
